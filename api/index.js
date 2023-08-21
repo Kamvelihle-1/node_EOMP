@@ -2,7 +2,7 @@ const {express,routes} = require('./controller')
 const app = express()
 const path = require('path')
 const cors = require('cors')
-// const errorHandler =require('./middleware/ErrorHandling')
+const errorHandler =require('./middleware/ErrorHandling')
 const cookieParser = require('cookie-parser')
 const port = +process.env.PORT || 3000
 
@@ -25,11 +25,11 @@ app.use(
     cors(),
     routes,
 )
-routes.get('^/$|/Home',(req,res)=>{
+routes.get('^/$|/home',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'./static/html/index.html'))
 })
 
-// app.use(errorHandler)
+app.use(errorHandler)
 
 app.listen(port,()=>{
     console.log(`The server is running on port ${port}`);

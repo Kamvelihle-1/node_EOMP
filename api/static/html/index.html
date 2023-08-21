@@ -3,72 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Custom styling -->
     <link rel="stylesheet" href="../css/style.css">
     <title>Router Description</title>
 </head>
 <body>
-    <h2>Router Description</h2>
-    <table>
+    <h2 class="display-2 m-3">Router Description</h2>
+    <table class="container text-center my-5">
         <tr>
-            <th>HTTP Methods</th>
-            <th>PATH</th>
-            <th>Description</th>
+            <th class="fs-2">HTTP Methods</th>
+            <th class="fs-2">PATH</th>
+            <th class="fs-2">Description</th>
         </tr>
         <tr>
-            <td>GET</td>
-            <td>/(Home Page)</td>
-            <td>This path takes you to the home page</td>
+            <td class="fs-1">GET</td>
+            <td class="fs-1">/ or /home</td>
+            <td class="fs-1">Home page</td>
         </tr>
         <tr>
-            <td>GET</td>
-            <td>/users</td>
-            <td>This path take you to a page with all users</td>
+            <td class="fs-1">GET</td>
+            <td class="fs-1">/users</td>
+            <td class="fs-1">List of all users</td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td class="fs-1">GET</td>
+            <td class="fs-1">/user/:id</td>
+            <td class="fs-1">Get a user </td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td class="fs-1">POST</td>
+            <td class="fs-1">/user</td>
+            <td class="fs-1">User sign up/registration</td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td class="fs-1">POST</td>
+            <td class="fs-1">/user</td>
+            <td class="fs-1">User login</td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td class="fs-1">PATCH</td>
+            <td class="fs-1">/user/:id</td>
+            <td class="fs-1">Update user with new information</td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td class="fs-1">DELETE</td>
+            <td class="fs-1">/user/:id</td>
+            <td class="fs-1">Delete a user</td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td class="fs-1">GET</td>
+            <td class="fs-1">/products</td>
+            <td class="fs-1">List of all products</td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td class="fs-1">GET</td>
+            <td class="fs-1">/product/:id</td>
+            <td class="fs-1">Get/view one product </td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td class="fs-1">POST</td>
+            <td class="fs-1">/product</td>
+            <td class="fs-1">Add a product</td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td class="fs-1">PATCH</td>
+            <td class="fs-1">/product/:id</td>
+            <td class="fs-1">Update product information</td>
         </tr>
+        <tr>
+            <td class="fs-1">DELETE</td>
+            <td class="fs-1">/product/:id</td>
+            <td class="fs-1">Delete a product</td>
+        </tr>
+
     </table>
     
 </body>
