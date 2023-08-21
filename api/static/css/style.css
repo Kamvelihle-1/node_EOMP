@@ -8,3 +8,10 @@
 body{
     text-align: center;
 }
+table{
+    border-spacing: 0;
+}
+tr, td,th{
+    border: 1px solid black;
+    padding: 0.5rem;
+}
