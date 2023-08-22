@@ -49,5 +49,7 @@ export default{
     img{
         max-width: 150px;
     }
-    
+    h2, p{
+        color: black;
+    }
 </style>

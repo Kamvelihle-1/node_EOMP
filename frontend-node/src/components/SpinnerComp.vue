@@ -22,7 +22,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 100vh; */
+    background: #E9D5B7;
 }
 
 .spinner-hidden{
@@ -39,6 +39,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: black;
     transition: opacity 0.75s, visibility 0.75s;
 }
 
@@ -48,7 +49,7 @@
     height: 100px;
     width: 100px;
     border: 6px solid;
-    border-color: black transparent black transparent ;
+    border-color: black transparent rgb(200,160,4) transparent ;
     border-radius: 50%;
     animation: spin 0.75s ease infinite;
 }

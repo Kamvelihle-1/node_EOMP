@@ -5,9 +5,10 @@
       <div class="row">
         <div class="col-sm-12 col-md-6">
           <img src="" alt="" style="width: 200px;" class="rounded-5 ">
-          <h6>About Us</h6>
+          <h6>Customer Support</h6>
           <p class="text-justify">
-              At SHOE GAME, we provide quality shoes to our clients in our Men and Women collection at an affordable price.
+              +27 21 444 7322 <br>
+              @shoegame.co.za
           </p>
         </div>
 
@@ -34,15 +35,8 @@
       <li class="nav-item">
         <a class="nav-link active text-white" aria-current="page" href="/contact">Contact</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Account
-        </a>
-        <ul class="dropdown-menu bg-black">
-          <li><a class="dropdown-item text-white " href="/register">Register</a></li>
-          <li><a class="dropdown-item text-white" href="/login">Login</a></li>
-          
-        </ul>
+      <li class="nav-item">
+        <a class="nav-link active text-white" aria-current="page" href="/admin">Admin</a>
       </li>
           </ul>
         </div>

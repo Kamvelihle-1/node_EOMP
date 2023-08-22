@@ -1,7 +1,9 @@
 <template>
-  <NavBarComp/>
-  <router-view/>
-  <FooterComp/>
+  <div class="container-fluid p-0">
+    <NavBarComp/>
+    <router-view/>
+    <FooterComp/>
+ </div>
 </template>
 <script>
   import NavBarComp from "@/components/NavBarComp.vue";
@@ -18,6 +20,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background: #E9D5B7;
 }
 
 nav {
