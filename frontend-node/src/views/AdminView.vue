@@ -1,23 +1,20 @@
 <template>
     <div>
-            <AdminComp/>
-            <AddUser/>
-            <AddProduct/>
-            <UpdateProduct/>
-            <UpdateUser/>
+            <h2>Admin Page</h2>
+            <UserComp/>
+            <ProdAdmin/>
 
     </div>
     
 </template>
 <script>
-  
-   import AdminComp from '@/components/AdminComp.vue';
-   import AddProduct from '@/components/AddProduct.vue';
-   import AddUser from '@/components/AddUser.vue';
-   import UpdateUser from '@/components/UpdateUser.vue';
+import UserComp from '../components/UserComp.vue'
+import ProdAdmin from '@/components/ProdAdmin.vue';
+
+   
    
     export default{
-        components: {AdminComp, AddProduct, AddUser, UpdateUser}
+        components: {UserComp, ProdAdmin}
     }
 
 </script>

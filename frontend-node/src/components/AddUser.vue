@@ -11,7 +11,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Add Users</h1>
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Add User</h1>
               <button
                 type="button"
                 class="btn-close"
@@ -19,7 +19,7 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" @submit="register">
               <h1>Add User</h1>
               <label class="label">FirstName</label>
               <input
@@ -55,6 +55,7 @@
               />
               <button
                 class="btn btn-success mt-3"
+                @click="($event) => register()"
                 data-bs-dismiss="modal"
               >
                 Add

@@ -173,7 +173,7 @@ color: black;
 }
 
 body {
-  font-family: 'REM', sans-serif;
+ font-family: 'REM', sans-serif; 
   background-color:#eaeaea;
 }
 .container{
@@ -333,7 +333,7 @@ body {
 
 
 .box{
-   width: 320px;
+   width: 290px;
    margin: 100px auto;
    background: #fff;
    border-radius: 7px;
@@ -378,9 +378,6 @@ details summary{
 
 
 
-details :hover{
-  background: rgb(200,160,4)
-}
 
 
 </style>

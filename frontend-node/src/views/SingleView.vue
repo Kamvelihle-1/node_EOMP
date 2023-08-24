@@ -1,16 +1,38 @@
 <template>
-    <div v-if="product" class="product-details" :key="product.prodID" id="single">
-      
-      <div class="mb-3">
-      
-      </div>
-      <div class="text-centre mt-5">
-
-               <img :src="product.prodUrl">
-                <h3>{{product.prodName}}</h3>
-                <p>{{ product.Brand }}</p>
-                <p>Price: R {{product.amount}}</p>
-        <button class="btn btn-primary mt-2 mb-4">Add to cart</button>
+      <div v-if="product" class="product-details" :key="product.prodID" id="single">
+        <div class="jack">
+        <div class="whole hole">
+          <div class="cont-fluid animate__animated animate__zoomInLeft">
+            <div class="row img1">
+              <div class="colu1">
+                <div class="view-image">
+                  <div class="smaller">
+                    <img class="small" :src="product.prodUrl" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cont-fluid1 animate__animated animate__zoomInRight">
+            <div class="row desc1">
+              <div class="col card">
+                <div class="card-body">
+                  <div class="name">
+                    <h5>{{ product.prodName }}</h5>
+                  </div>
+                  <div class="description">
+                    <p>Brand: {{ product.Brand }}</p>
+                    <p>Description: {{ product.prodDesc }}</p>
+                  </div>
+                  <div class="price">
+                    <p>Price: R {{ product.amount }}</p><br>
+                    <button class="mb-3">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </template>
@@ -47,4 +69,210 @@
         align-content: center;
         flex-wrap: wrap;
       } */
+      * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h5, p, button{
+  font-family: 'REM', sans-serif;
+}
+.addp {
+  margin-top: 3rem;
+  border-top: 2px solid black;
+}
+.ad {
+  float: right;
+  margin-top: 1rem;
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+}
+.line {
+  border: 3px solid black;
+  /* border: none; */
+}
+.cont-fluid {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 100%;
+}
+.cont-fluid1 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  /* margin-bottom: 3rem; */
+}
+.whole {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+.view-image img {
+  height: 30rem;
+  /* margin-left: 8rem; */
+  /* max-width: 40rem; */
+  max-height: 30rem;
+  border-radius: 29% 71% 23% 77% / 77% 19% 81% 23%;
+  border: 2px solid black;
+}
+
+.rig {
+  float: right;
+}
+.desc1 {
+  /* height: 30rem; */
+  max-height: 100%;
+}
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid rgb(200, 160,4);
+}
+.name h5 {
+  font-size: 25px;
+}
+/* .img1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+} */
+
+@media screen and (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .jack {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .hole {
+    display: inline-block;
+    justify-content: center;
+    align-content: center;
+  }
+  .view-image img {
+    width: 14rem;
+    height: 18rem;
+    border-radius: 5px;
+    border: 2px solid black;
+  }
+  .cont-fluid {
+    width: 150px;
+    height: 300px;
+    max-height: 100%;
+  }
+  .cont-fluid1 {
+    width: 150px;
+    height: 300px;
+    max-height: 100%;
+  }
+  .sing {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .card {
+    width: 22rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+  }
+  .heading h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .desc1 {
+    margin-bottom: 3rem;
+  }
+
+  .smaller img {
+    width: 22rem;
+    height: 18rem;
+    border-radius: 5px;
+    border: 2px solid black;
+  }
+}
+@media screen and (max-width: 650px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .jack {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .hole {
+    display: inline-block;
+    justify-content: center;
+    align-content: center;
+  }
+  .view-image img {
+    width: 14rem;
+    height: 18rem;
+    border-radius: 5px;
+    border: 2px solid black;
+  }
+  .cont-fluid {
+    width: 150px;
+    height: 300px;
+    max-height: 100%;
+  }
+  .cont-fluid1 {
+    width: 150px;
+    height: 300px;
+    max-height: 100%;
+  }
+  .sing {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .card {
+    width: 14rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+  }
+  .heading h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .desc1 {
+    margin-bottom: 3rem;
+  }
+}
 </style>

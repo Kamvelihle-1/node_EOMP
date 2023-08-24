@@ -3,7 +3,7 @@
       <!-- Modal -->
       <div
         class="modal fade"
-        id="addProductModal"
+        id="addUserModal"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
@@ -19,56 +19,49 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body" @submit="addProduct">
-              <h1>Add Product</h1>
-              <label class="label">Product Name</label>
+            <div class="modal-body" @submit="register">
+              
+              <label class="label">FirstName</label>
               <input
                 class="input"
-                v-model="prodName"
-                type="text"
-                placeholder="Product Name"
-                required
-              />
-              <label class="label">Price</label>
-              <input
-                class="input"
-                v-model="price"
-                type="text"
-                placeholder="R"
-                required
-              />
-              <label class="label">Category</label>
-              <input
-                class="input"
-                v-model="category"
+                v-model="firstName"
                 type="text"
                 placeholder="Name"
                 required
               />
-              <label class="label">Quantity</label>
+              <label class="label">LastName</label>
               <input
                 class="input"
-                v-model="quantity"
+                v-model="lastName"
                 type="text"
-                placeholder="0"
+                placeholder="Surname"
                 required
               />
-              <label class="label">Image</label>
+              <label class="label">Email</label>
               <input
                 class="input"
-                v-model="image"
-                type="text"
-                placeholder="http://"
+                v-model="emailAdd"
+                type="email"
+                placeholder="Email"
+                required
+              />
+              <label class="label">Password</label>
+              <input
+                class="input"
+                v-model="password"
+                type="password"
+                placeholder="Password"
                 required
               />
               <button
                 class="btn btn-success mt-3"
-                type="submit"
+                @click="($event) => register()"
+                data-bs-dismiss="modal"
               >
                 Add
               </button>
             </div>
-            <div class="modal-footer">
+            <!-- <div class="modal-footer">
               <button
                 type="button"
                 class="btn btn-secondary"
@@ -77,18 +70,16 @@
                 Close
               </button>
               <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
     </div>
   </template>
   <script>
-  // import axios from "axios";
   export default {
     
- 
-  }
+  };
   </script>
   <style scoped>
   .modal-body {

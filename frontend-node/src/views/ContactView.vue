@@ -10,36 +10,41 @@
             <!--contact section-->
 
             <div class="mt-3 text-white">
-                <p class="p-2 text-black">Get in Touch with us!
+                <p class="p-2 text-black fw-semibold">Get in Touch with us!
                     As see from the Map above , we do offer in-store shopping at Somerset Mall. <br>
                  You will be contacted soon for any additional infomation or feedback regarding our products or delivery service.
             </p>
             </div>
 
-                    <div class="contact">
-                                <form action="https://formspree.io/f/mvojaave" method="POST">
-                                                    <label class="text-black">
-                                    FullName:
-                                    <input type="name" name="fullname" class="input">
-                                    </label >
-                                    <label class="text-black">
-                                    Email:
-                                    <input type="email" name="email" class="input">
+                    <section class="registration">
+                      
+                        <form class="form" action="https://formspree.io/f/mvojaave" method="POST">
+                             <p class="title">Leave your Details</p>
+                                <div class="flex">
+                                    <label>
+                                        <input  placeholder="" type="text" class="input">
+                                        <span>Firstname:</span>
                                     </label>
-                                    <label class="text-black">
-                                    Location:
-                                    <input type="location" name="location" class="input">
+                            
+                                    <label>
+                                        <input placeholder="" type="text" class="input">
+                                        <span>Lastname:</span>
                                     </label>
-                                    <label class="text-black">
-                                    Message:
-                                    <textarea name="message"></textarea>
-                                    </label>
-                                    <button type="submit" class="mb-4">Send</button>
-                                        
-
                                     
-                                </form>
-                    </div>
+                                </div> 
+                                <label>
+                                    <input placeholder="" type="email" class="input fw-semibold">
+                                    <span>Email:</span>
+                                </label> 
+                                    <label class="text-black fw-semibold">
+                                   <span> Message:</span> 
+                                    <textarea name="message" class="input"></textarea>
+                                    </label>
+                                <button class="submit">Submit</button>
+                        
+                        </form>
+                    </section>
+     
 
         </div>
        
@@ -48,101 +53,144 @@
     </section>
       
     </template>
-    <script></script>
-    <style>
+    <script>
+     export default{
 
-
-        /* .contact-sec{
-            display: flex;
-            flex-direction: row;
-            align-content: center;
-            justify-content: center;
-            gap: 20px;
-        } */
-        /* .card {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 350px;
-            width: 300px;
-            flex-direction: column;
-            gap: 35px;
-            background: #e3e3e3;
-            box-shadow: 16px 16px 32px #c8c8c8,
-                    -16px -16px 32px #fefefe;
-            border-radius: 8px;
+    }
+    </script>
+    <style scoped>
+        p{
+            font-family: 'REM', sans-serif;
         }
-         */
-         .form {
-     --width-of-input: 200px;
-     --border-height: 1px;
-     --border-before-color: rgba(221, 221, 221, 0.39);
-     --border-after-color: #5891ff;
-     --input-hovered-color: #4985e01f;
-     position: relative;
-     width: var(--width-of-input);
-    }
-    /* styling of Input */
-    .input {
-     color: #fff;
-     font-size: 0.9rem;
-     background-color: transparent;
-     width: 100%;
-     box-sizing: border-box;
-     padding-inline: 0.5em;
-     padding-block: 0.7em;
-     border: none;
-     border-bottom: var(--border-height) solid var(--border-before-color);
-    }
-    /* styling of animated border */
-    .input-border {
-     position: absolute;
-     background: var(--border-after-color);
-     width: 0%;
-     height: 2px;
-     bottom: 0;
-     left: 0;
-     transition: 0.3s;
-    }
-    /* Hover on Input */
-    input:hover {
-     background: var(--input-hovered-color);
-    }
-    
-    input:focus {
-     outline: none;
-    }
-    /* here is code of animated border */
-    input:focus ~ .input-border {
-     width: 100%;
-    }
-    button {
-      font-weight: bold;
-      color: white;
-      border-radius: 2rem;
-      width: 95.02px;
-      height: 42.66px;
-      border: none;
-      background-color: #3653F8;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    /* .info{
-        background-image: url(https://i.postimg.cc/KzQsZkc7/dark-blue-smart-blurred-pattern-elegant-bright-illustration-with-gradient-background-for-cell-phones.jpg);
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    } */
     iframe {
         width: 100%;
         height: 400px;
     }
-    /* .contact{
+      span{
+        font-family: 'REM', sans-serif;
+        font-size: 15px;
+    }
+      .registration{
         display: flex;
-        justify-content: center;
-        align-content: center;
-    } */
+       justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color:#eaeaea;
+      }
+      .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    max-width: 350px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+   
+  }
+  
+  .title {
+    font-size: 28px;
+    color: rgb(200,160,4);
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+  }
+  
+  .title::before,.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background: rgb(200,160,4);
+  }
+  
+  .title::before {
+    width: 18px;
+    height: 18px;
+    background-color: black;
+  }
+  
+  .title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+  }
+  
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+  
+  .form label {
+    position: relative;
+  }
+  
+  .form label .input {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+  }
+  
+  .form label .input + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  
+  .form label .input:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+  }
+  
+  .form label .input:focus + span,.form label .input:valid + span {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .form label .input:valid + span {
+    color:black;
+  }
+  
+  .submit {
+    border: none;
+    outline: none;
+    background: rgb(200,160,4);
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+  }
+  
+  .submit:hover {
+    background-color: black;
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
     </style>

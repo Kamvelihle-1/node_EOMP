@@ -7,6 +7,7 @@ export default createStore({
     products: null,
     product: null,
     users: null,
+    user: null,
     msg:null
   },
  
@@ -16,6 +17,12 @@ export default createStore({
     },
      setProduct: (state, product) => {
       state.product = product;
+    },
+    setUsers: (state, users) => {
+      state.users = users;
+    },
+    setUser: (state, user) => {
+      state.users = user;
     },
     setMessage:(state,msg)=>{
       state.msg = msg;
@@ -40,6 +47,26 @@ export default createStore({
       context.commit("setMessage", "An error occured")
     }
   }
+  ,
+  async getUsers(context) {
+    try{
+      const {data} = await axios.get(`${cUrl}users`)
+      context.commit("setUsers", data.results)
+    }catch(e){
+      context.commit("setMsg", "An error occured")
+      console.log(e);
+    }
   },
+  async getUser(context, id) {
+    try{
+      const {data} = await axios.get(`${cUrl}user/`+ id)
+      context.commit("setUser", data.results[0])
+    }catch(e){
+      context.commit("setMsg", "An error occured")
+      console.log(e);
+    }
+  },
+  }
+
  
 })

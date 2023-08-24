@@ -52,4 +52,7 @@ export default{
     h2, p{
         color: black;
     }
+    @media screen and (max-width){
+        
+    }
 </style>
