@@ -74,7 +74,7 @@ class Users{
         }
         const query = `
         INSERT INTO Users
-        SET ?
+        SET ?;
         `
         const token = tokenCreate(payload)
         db.query(query,[dt],(err)=>{
