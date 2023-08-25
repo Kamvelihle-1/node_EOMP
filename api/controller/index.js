@@ -11,10 +11,10 @@ routes.get('/users',(req,res)=>{
 routes.get('/user/:id',(req,res)=>{
     users.getUser(req,res)
 })
-routes.post('/user',bodyParser.json(),(req,res)=>{
+routes.post('/user/login',bodyParser.json(),(req,res)=>{
     users.loginUser(req,res)
 })
-routes.post('/user',bodyParser.json(),(req,res)=>{
+routes.post('/user/register',bodyParser.json(),(req,res)=>{
     users.registerUser(req,res)
 })
 routes.patch('/user/:id',bodyParser.json(),(req,res)=>{
