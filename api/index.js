@@ -22,7 +22,7 @@ app.use(
         extended:false
     }),
     cookieParser(),
-    cors({origin:'*'}),
+    cors(),
     routes,
 )
 routes.get('^/$|/home',(req,res)=>{
