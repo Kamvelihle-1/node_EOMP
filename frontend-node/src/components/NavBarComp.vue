@@ -20,10 +20,6 @@
           <a class="nav-link active" aria-current="page" href="/contact">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active " href="/register">Sign Up</a>
-        </li>
-
-        <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/admin">Admin</a>
         </li>
       </ul>

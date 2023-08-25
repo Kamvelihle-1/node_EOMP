@@ -1,18 +1,18 @@
 <template>
    <div class="container">
     <div class="row mb-4">
-            <div class="col-sm-4"> <FilterComp @apply-filter="newdataDisplay"></FilterComp></div>
-            <div class="col-sm-4"><SortComp @apply-sort="newdataDisplay"></SortComp></div>
-            <div class="col-sm-2"><SearchComp @apply-search="newdataDisplay"></SearchComp></div>
+            <div class="col"> <FilterComp @apply-filter="newdataDisplay"></FilterComp></div>
+            <div class="col"><SortComp @apply-sort="newdataDisplay"></SortComp></div>
+            
         </div>
         
         <div class="flex-container" v-if="outputData.length>0" id="procard">
             <div class="card mb-5" v-for="product of outputData " :key="product.prodID">
-                <div class="card-body">
+                <div class="card-body animate__backOutDown">
                     <img :src="product.prodUrl">
-                    <h3 class="mt-2">{{product.prodName}}</h3>
-                    <p>Price: R {{product.amount}}</p>
-                    <router-link class="btn btn-primary" :to="{ name:'product', params: {id: product.prodID}}">View More</router-link>
+                    <h3 class="mt-2 fw-bold">{{product.prodName}}</h3>
+                    <p class="fw-bold">Price: R {{product.amount}}</p>
+                    <router-link class="btn" :to="{ name:'product', params: {id: product.prodID}}">View More</router-link>
                 </div>
             </div>
 
@@ -37,9 +37,9 @@
     import SpinnerComp from '@/components/SpinnerComp.vue';
     import FilterComp from '@/components/FilterComp.vue';
     import SortComp from '../components/SortComp.vue';
-    import SearchComp from '@/components/SearchComp.vue';
+
     export default{
-    components: { SpinnerComp, FilterComp, SortComp, SearchComp}, 
+    components: { SpinnerComp, FilterComp, SortComp}, 
     data(){
         return{
             outputData:[],
@@ -77,6 +77,11 @@
         max-width: 300px;
         margin-top: 15px;
     }
+    .btn:hover{
+    background:#2c3e50 ;
+    padding: 1rem;
+    color: rgb(200,160,4);
+    }
     .flex-container{
       display: flex;
       flex-wrap: wrap;
@@ -96,6 +101,30 @@
             max-width: 200px;
         }
         
+    }
+    @media screen and (max-width: 312px){
+        img{
+            max-width: 190px;
+        }
+        
+    }
+    @media screen and (max-width: 320px){
+        img{
+            max-width: 190px;
+
+        }
+        
+    }
+    @media screen and (max-width: 330px){
+        img{
+            max-width: 150px;
+            max-height: 180px;
+        }
+        
+    }
+    .btn{
+        background: rgb(200,160,4);
+        box-shadow: 0 0 25px rgb(200,160,4);
     }
 
 </style>

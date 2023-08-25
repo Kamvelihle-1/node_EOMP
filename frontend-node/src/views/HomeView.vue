@@ -40,7 +40,9 @@
                   <p class="des fw-semibold p-2">
                   Shop quality summer shoes for both men and women.
                   </p>
-                  <button class="shadow__btn">Shop Now!</button>
+                  <button class="shadow__btn">
+                    <a href="/products" >Shop Now!</a>
+                  </button>
                 </div>
               </div>
           </div>
@@ -58,7 +60,9 @@
                   <p class="des fw-semibold p-2">
                     Shop quality formal shoes to complete your look!
                   </p>
-                  <button class="shadow__btn">Shop Now!</button>
+                  <button class="shadow__btn">
+                    <a href="/products" >Shop Now!</a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -76,7 +80,9 @@
                 <p class="des fw-semibold p-2">
                 Shop the best quality and step up your shoe drip!
                 </p>
-                <button class="shadow__btn">Shop Now!</button>
+                <button class="shadow__btn">
+                  <a href="/products">Shop Now!</a>
+                  </button>
               </div>
             </div>
           </div>
@@ -317,7 +323,10 @@ body {
   transition: 0.5s;
   transition-property: box-shadow;
 }
-
+button:hover{
+  background: rgb(200,160,4);
+  color:#2c3e50
+}
 .shadow__btn {
   background: rgb(200,160,4);
   box-shadow: 0 0 25px rgb(200,160,4);

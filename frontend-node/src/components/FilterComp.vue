@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="col">
         <div class="row">
             <div class="col-sm-4 mx-1">
                 <div class="row">
@@ -27,7 +27,7 @@
                 </div>   
             </div>
             <div class="col-sm-2">
-                <button @click="filter(products)">Filter</button>
+                <button class="fw-bold" @click="filter(products)">Filter</button>
             </div>
         </div>
 
@@ -70,3 +70,20 @@ export default{
 }
 
 </script>
+<style scoped>
+select,label{
+    font-family: 'REM', sans-serif;
+}
+button{
+    padding: 0.5rem;
+    background:#2c3e50;
+    color:white;
+    border-radius: 1rem;
+    font-family: 'REM', sans-serif;
+}
+button:hover{
+  background: rgb(200,160,4);
+  padding: 1rem;
+  color:#2c3e50
+}
+</style>

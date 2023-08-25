@@ -21,12 +21,12 @@
                     <h5>{{ product.prodName }}</h5>
                   </div>
                   <div class="description">
-                    <p>Brand: {{ product.Brand }}</p>
-                    <p>Description: {{ product.prodDesc }}</p>
+                    <p class="fw-bold">Brand: {{ product.Brand }}</p>
+                    <p class="fw-bold">Description: {{ product.prodDesc }}</p>
                   </div>
                   <div class="price">
-                    <p>Price: R {{ product.amount }}</p><br>
-                    <button class="mb-3">Add to Cart</button>
+                    <p class="fw-bold">Price: R {{ product.amount }}</p><br>
+                    <button class="mb-3 btn fw-bold">Add to Cart</button>
                   </div>
                 </div>
               </div>
@@ -76,6 +76,11 @@
 }
 h5, p, button{
   font-family: 'REM', sans-serif;
+}
+button:hover{
+  background: rgb(200,160,4);
+  padding: 1rem;
+  color:#2c3e50
 }
 .addp {
   margin-top: 3rem;
@@ -269,6 +274,11 @@ h5, p, button{
   .heading h1 {
     font-size: 20px;
     text-align: center;
+  }
+  .btn{
+    width: 100px;
+    background: rgb(200,160,4);
+  box-shadow: 0 0 25px rgb(200,160,4);
   }
 
   .desc1 {

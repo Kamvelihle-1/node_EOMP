@@ -30,7 +30,7 @@
         <a class="nav-link active text-white" aria-current="page" href="/products">Product</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active text-white" aria-current="page" href="/products">About</a>
+        <a class="nav-link active text-white" aria-current="page" href="/about">About</a>
       </li>
       <li class="nav-item">
         <a class="nav-link active text-white" aria-current="page" href="/contact">Contact</a>
